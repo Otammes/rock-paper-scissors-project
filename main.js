@@ -14,3 +14,10 @@ function getComputerChoice(outcome) {
 
 let outcome = Math.random();
 console.log(getComputerChoice(outcome))
+
+
+function getHumanChoice() {
+    let choice = prompt("Rock, Paper or Scissors?")
+    return choice
+}
+console.log(getHumanChoice())
