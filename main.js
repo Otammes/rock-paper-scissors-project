@@ -20,6 +20,7 @@ console.log(computerChoice)
 
 function getHumanChoice() {
     let choice = prompt("Rock, Paper or Scissors?")
+    choice = choice.toLowerCase()
     return choice
 }
 
@@ -35,7 +36,7 @@ let computerScore = 0
 
 
 function playRound(humanChoice, computerChoice) {
-    humanChoice = humanChoice.toLowerCase();
+    
     if (humanChoice === "rock" && computerChoice === "rock" 
         || humanChoice === "paper" && computerChoice === "paper"
         || humanChoice === "scissors" && computerChoice === "scissors"
