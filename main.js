@@ -1,4 +1,4 @@
-console.log("Hello")
+console.log("Hello, ready for a game of Rock, Paper, Scissors?")
 
 
 
@@ -21,11 +21,16 @@ console.log(computerChoice)
 function getHumanChoice() {
     let choice = prompt("Rock, Paper or Scissors?")
     choice = choice.toLowerCase()
+    if (choice === "rock" || choice === "paper" || choice === "scissors")
     return choice
+    else if (choice == "") {
+        alert("You haven't made a choice yet.")}
+    else {
+        alert("You can't use that word for this game")}
 }
 
 let humanChoice = getHumanChoice();
-/* Prompts the user for their input  */
+/* The function prompts the user for their input and stores it in humanChoice  */
 
 
 let humanScore = 0
@@ -58,3 +63,4 @@ function playRound(humanChoice, computerChoice) {
 
 playRound(humanChoice, computerChoice)
 
+console.log(computerScore)
