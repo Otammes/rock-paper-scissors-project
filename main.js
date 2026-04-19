@@ -11,12 +11,12 @@ function getComputerChoice(outcome) {
         return("scissors")
 
 } 
-/* Picks a random number and converts it to a value */
+/* Takes the random number provided by Math.random() and runs it */
 
 let outcome = Math.random();
 let computerChoice = getComputerChoice(outcome);
 console.log(computerChoice)
-/* Assigns a random variable */ 
+/* Result of function gets placed in computerChoice variable */ 
 
 function getHumanChoice() {
     let choice = prompt("Rock, Paper or Scissors?")
