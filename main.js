@@ -11,7 +11,6 @@ function getComputerChoice(outcome) {
         return("scissors")}
 
 } 
-/* Takes the random number provided by Math.random() and runs it */
 
 /* Result of function gets placed in computerChoice variable */ 
 
@@ -26,7 +25,7 @@ function getHumanChoice() {
         alert("You can't use that word for this game")}
 }
 
-/* The function prompts the user for their input and stores it in humanChoice  */
+/* The function prompts the user for their input */
  
 function playGame() {
 
