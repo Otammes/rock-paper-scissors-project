@@ -13,9 +13,6 @@ function getComputerChoice(outcome) {
 } 
 /* Takes the random number provided by Math.random() and runs it */
 
-let outcome = Math.random();
-let computerChoice = getComputerChoice(outcome);
-console.log(computerChoice)
 /* Result of function gets placed in computerChoice variable */ 
 
 function getHumanChoice() {
@@ -29,10 +26,12 @@ function getHumanChoice() {
         alert("You can't use that word for this game")}
 }
 
-let humanChoice = getHumanChoice();
 /* The function prompts the user for their input and stores it in humanChoice  */
  
+function playGame() {
 
+let humanScore = 0
+let computerScore = 0
 
 function playRound(humanChoice, computerChoice) {
     
@@ -51,24 +50,49 @@ function playRound(humanChoice, computerChoice) {
     
     else {console.log("You lose!") 
         ++computerScore
-    }
-
+    }           
 }
 
-playRound(humanChoice, computerChoice)
+/* Moved playRound function into playGame function to play 5 rounds */
 
-console.log(computerScore)
+let outcome = Math.random();
 
+let computerChoice = getComputerChoice(outcome);
+let humanChoice = getHumanChoice();
+playRound(humanChoice, computerChoice) /* Round 1 */
 
-function playGame() {
-let humanScore = 0
-let computerScore = 0
 outcome = Math.random();
+
 computerChoice = getComputerChoice(outcome);
-
 humanChoice = getHumanChoice();
+playRound(humanChoice, computerChoice) /* Round 2 */
 
-playRound(humanChoice, computerChoice)
+outcome = Math.random();
+
+computerChoice = getComputerChoice(outcome);
+humanChoice = getHumanChoice();
+playRound(humanChoice, computerChoice) /* Round 3 */
+
+outcome = Math.random();
+
+computerChoice = getComputerChoice(outcome);
+humanChoice = getHumanChoice();
+playRound(humanChoice, computerChoice) /* Round 4 */
+
+outcome = Math.random();
+
+computerChoice = getComputerChoice(outcome);
+humanChoice = getHumanChoice();
+playRound(humanChoice, computerChoice) /* Round 5 */
+
+if (humanScore > computerScore) {
+    alert("You have won!")
+    }
+else if (computerScore > humanScore){
+    alert("You have lost!")
+}
+else {alert("It's a tie")
+}
 }
 
 playGame()
