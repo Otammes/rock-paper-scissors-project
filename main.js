@@ -4,11 +4,11 @@ console.log("Hello")
 
 function getComputerChoice(outcome) {
     if (outcome <= 0.33)
-        return("Rock")
+        return("r +ock")
     else if (outcome >= 0.34 && outcome <= 0.67)
-        return("Paper")
+        return("paper")
     else
-        return("Scissors")
+        return("scissors")
 
 } 
 /* Picks a random number and converts it to a value */
@@ -16,7 +16,7 @@ function getComputerChoice(outcome) {
 let outcome = Math.random();
 let computerChoice = getComputerChoice();
 console.log(getComputerChoice(outcome))
-
+/* Assigns a random variable */ 
 
 function getHumanChoice() {
     let choice = prompt("Rock, Paper or Scissors?")
@@ -25,7 +25,7 @@ function getHumanChoice() {
 
 let humanChoice = getHumanChoice();
 console.log(getHumanChoice())
-/* Prompts the user their input  */
+/* Prompts the user for their input  */
 
 
 const humanScore = 0
@@ -36,8 +36,21 @@ const computerScore = 0
 
 
 function playRound(humanChoice, computerChoice) {
-    humanChoice === computerChoice
-        
+    humanChoice = humanChoice.toLowerCase()
+    if (humanChoice === "rock" && computerChoice === "rock" 
+        || humanChoice === "paper" && computerChoice === "paper"
+        || humanChoice === "scissors" && computerChoice === "scissors"
+    ) console.log("Tie")
+
+    else if (humanChoice === "rock" && computerChoice === "scissors"
+        || humanChoice === "scissors" && computerChoice === "paper"
+        || humanChoice === "paper" && computerChoice === "rock")
+
+        console.log("You win this round")
+    
+    else console.log("You lose!")
+
+
 }
 
 
