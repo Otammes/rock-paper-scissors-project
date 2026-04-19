@@ -3,12 +3,12 @@ console.log("Hello, ready for a game of Rock, Paper, Scissors?")
 
 
 function getComputerChoice(outcome) {
-    if (outcome <= 0.33)
-        return("rock")
-    else if (outcome <= 0.67)
-        return("paper")
-    else
-        return("scissors")
+    if (outcome <= 0.33){
+        return("rock")}
+    else if (outcome <= 0.67){
+        return("paper")}
+    else {
+        return("scissors")}
 
 } 
 /* Takes the random number provided by Math.random() and runs it */
@@ -21,8 +21,8 @@ console.log(computerChoice)
 function getHumanChoice() {
     let choice = prompt("Rock, Paper or Scissors?")
     choice = choice.toLowerCase()
-    if (choice === "rock" || choice === "paper" || choice === "scissors")
-    return choice
+    if (choice === "rock" || choice === "paper" || choice === "scissors"){
+    return choice }
     else if (choice == "") {
         alert("You haven't made a choice yet.")}
     else {
@@ -36,8 +36,6 @@ let humanChoice = getHumanChoice();
 let humanScore = 0
 let computerScore = 0
 /* Starting values of the scoreboard */ 
-
-
 
 
 function playRound(humanChoice, computerChoice) {
@@ -64,3 +62,4 @@ function playRound(humanChoice, computerChoice) {
 playRound(humanChoice, computerChoice)
 
 console.log(computerScore)
+
