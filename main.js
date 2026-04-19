@@ -63,3 +63,15 @@ playRound(humanChoice, computerChoice)
 
 console.log(computerScore)
 
+
+function playGame() {
+
+outcome = Math.random();
+computerChoice = getComputerChoice(outcome);
+
+humanChoice = getHumanChoice();
+
+playRound(humanChoice, computerChoice)
+}
+
+playGame()
