@@ -31,11 +31,7 @@ function getHumanChoice() {
 
 let humanChoice = getHumanChoice();
 /* The function prompts the user for their input and stores it in humanChoice  */
-
-
-let humanScore = 0
-let computerScore = 0
-/* Starting values of the scoreboard */ 
+ 
 
 
 function playRound(humanChoice, computerChoice) {
@@ -65,7 +61,8 @@ console.log(computerScore)
 
 
 function playGame() {
-
+let humanScore = 0
+let computerScore = 0
 outcome = Math.random();
 computerChoice = getComputerChoice(outcome);
 
