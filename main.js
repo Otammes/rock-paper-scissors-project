@@ -4,8 +4,8 @@ console.log("Hello")
 
 function getComputerChoice(outcome) {
     if (outcome <= 0.33)
-        return("r +ock")
-    else if (outcome >= 0.34 && outcome <= 0.67)
+        return("rock")
+    else if (outcome <= 0.67)
         return("paper")
     else
         return("scissors")
@@ -14,8 +14,8 @@ function getComputerChoice(outcome) {
 /* Picks a random number and converts it to a value */
 
 let outcome = Math.random();
-let computerChoice = getComputerChoice();
-console.log(getComputerChoice(outcome))
+let computerChoice = getComputerChoice(outcome);
+console.log(computerChoice)
 /* Assigns a random variable */ 
 
 function getHumanChoice() {
