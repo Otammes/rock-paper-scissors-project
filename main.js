@@ -24,37 +24,36 @@ function getHumanChoice() {
 }
 
 let humanChoice = getHumanChoice();
-console.log(getHumanChoice())
 /* Prompts the user for their input  */
 
 
-const humanScore = 0
-const computerScore = 0
+let humanScore = 0
+let computerScore = 0
 /* Starting values of the scoreboard */ 
 
 
 
 
 function playRound(humanChoice, computerChoice) {
-    humanChoice = humanChoice.toLowerCase()
+    humanChoice = humanChoice.toLowerCase();
     if (humanChoice === "rock" && computerChoice === "rock" 
         || humanChoice === "paper" && computerChoice === "paper"
         || humanChoice === "scissors" && computerChoice === "scissors"
-    ) console.log("Tie")
+    ) {console.log("Tie")}
 
     else if (humanChoice === "rock" && computerChoice === "scissors"
         || humanChoice === "scissors" && computerChoice === "paper"
-        || humanChoice === "paper" && computerChoice === "rock")
+        || humanChoice === "paper" && computerChoice === "rock") {
 
         console.log("You win this round")
+        ++humanScore
+        }
     
-    else console.log("You lose!")
-
+    else {console.log("You lose!") 
+        ++computerScore
+    }
 
 }
 
+playRound(humanChoice, computerChoice)
 
-humanChoice = humanChoice.toLowerCase();
-
-const humanSelection = getHumanChoice()
-const computerSelection = getComputerChoice()
