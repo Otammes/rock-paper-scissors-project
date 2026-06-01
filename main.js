@@ -14,6 +14,9 @@ function getComputerChoice(outcome) {
 
 /* Result of function gets placed in computerChoice variable */ 
 
+const rockButton = document.querySelector("#rock")
+const paperButton = document.querySelector("#paper")
+const scissorsButton = document.querySelector("#scissors")
 
 
 /* The function prompts the user for their input */
