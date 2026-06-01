@@ -60,29 +60,6 @@ let computerChoice = getComputerChoice(outcome);
 let humanChoice = getHumanChoice();
 playRound(humanChoice, computerChoice) /* Round 1 */
 
-outcome = Math.random();
-
-computerChoice = getComputerChoice(outcome);
-humanChoice = getHumanChoice();
-playRound(humanChoice, computerChoice) /* Round 2 */
-
-outcome = Math.random();
-
-computerChoice = getComputerChoice(outcome);
-humanChoice = getHumanChoice();
-playRound(humanChoice, computerChoice) /* Round 3 */
-
-outcome = Math.random();
-
-computerChoice = getComputerChoice(outcome);
-humanChoice = getHumanChoice();
-playRound(humanChoice, computerChoice) /* Round 4 */
-
-outcome = Math.random();
-
-computerChoice = getComputerChoice(outcome);
-humanChoice = getHumanChoice();
-playRound(humanChoice, computerChoice) /* Round 5 */
 
 if (humanScore > computerScore) {
     alert("You have won!")
