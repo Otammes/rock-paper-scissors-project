@@ -15,14 +15,7 @@ function getComputerChoice(outcome) {
 /* Result of function gets placed in computerChoice variable */ 
 
 function getHumanChoice() {
-    let choice = prompt("Rock, Paper or Scissors?")
-    choice = choice.toLowerCase()
-    if (choice === "rock" || choice === "paper" || choice === "scissors"){
-    return choice }
-    else if (choice == "") {
-        alert("You haven't made a choice yet.")}
-    else {
-        alert("You can't use that word for this game")}
+
 }
 
 /* The function prompts the user for their input */
