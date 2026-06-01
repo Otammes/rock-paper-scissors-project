@@ -14,9 +14,7 @@ function getComputerChoice(outcome) {
 
 /* Result of function gets placed in computerChoice variable */ 
 
-function getHumanChoice() {
 
-}
 
 /* The function prompts the user for their input */
  
