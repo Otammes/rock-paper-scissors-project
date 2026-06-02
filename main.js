@@ -12,19 +12,26 @@ function getComputerChoice(outcome) {
 
 } 
 
+let outcome = Math.random();
+
+let computerChoice = getComputerChoice(outcome);
 /* Result of function gets placed in computerChoice variable */ 
+
+
+function playGame() {
+
+let humanScore = 0
+let computerScore = 0
+
 
 const rockButton = document.querySelector("#rock")
 const paperButton = document.querySelector("#paper")
 const scissorsButton = document.querySelector("#scissors")
 
+rockButton.addEventListener("click", () => {playRound(rockButton.id, getComputerChoice(Math.random()))})
+paperButton.addEventListener("click", () => {playRound(paperButton.id, getComputerChoice(Math.random()))})
+scissorsButton.addEventListener("click", () => {playRound(scissorsButton.id, getComputerChoice(Math.random()))})
 
-/* The function prompts the user for their input */
- 
-function playGame() {
-
-let humanScore = 0
-let computerScore = 0
 
 function playRound(humanChoice, computerChoice) {
     
@@ -43,19 +50,9 @@ function playRound(humanChoice, computerChoice) {
     
     else {console.log("You lose!") 
         ++computerScore
-    }           
-}
-
-/* Moved playRound function into playGame function to play 5 rounds */
-
-let outcome = Math.random();
-
-let computerChoice = getComputerChoice(outcome);
-let humanChoice = getHumanChoice();
-playRound(humanChoice, computerChoice) /* Round 1 */
-
-
-if (humanScore > computerScore) {
+    }   
+       
+    if (humanScore > computerScore) {
     alert("You have won!")
     }
 else if (computerScore > humanScore){
@@ -64,5 +61,11 @@ else if (computerScore > humanScore){
 else {alert("It's a tie")
 }
 }
+
+/* Moved playRound function into playGame function to play 5 rounds */
+
+
+}
+
 
 playGame()
