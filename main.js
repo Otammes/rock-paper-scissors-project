@@ -11,15 +11,6 @@ function getComputerChoice(outcome) {
         return("scissors")}
 
 } 
-
-let outcome = Math.random();
-
-let computerChoice = getComputerChoice(outcome);
-/* Result of function gets placed in computerChoice variable */ 
-
-
-function playGame() {
-
 let humanScore = 0
 let computerScore = 0
 
@@ -28,44 +19,44 @@ const rockButton = document.querySelector("#rock")
 const paperButton = document.querySelector("#paper")
 const scissorsButton = document.querySelector("#scissors")
 
+const results = document.querySelector("#results")
+const scoreboard = document.querySelector("#scoreboard")
+
 rockButton.addEventListener("click", () => {playRound(rockButton.id, getComputerChoice(Math.random()))})
 paperButton.addEventListener("click", () => {playRound(paperButton.id, getComputerChoice(Math.random()))})
 scissorsButton.addEventListener("click", () => {playRound(scissorsButton.id, getComputerChoice(Math.random()))})
 
 
 function playRound(humanChoice, computerChoice) {
+
+    
     
     if (humanChoice === "rock" && computerChoice === "rock" 
         || humanChoice === "paper" && computerChoice === "paper"
         || humanChoice === "scissors" && computerChoice === "scissors"
-    ) {console.log("Tie")}
+    ) {results.textContent = "It's a tie"
+    }
 
     else if (humanChoice === "rock" && computerChoice === "scissors"
         || humanChoice === "scissors" && computerChoice === "paper"
         || humanChoice === "paper" && computerChoice === "rock") {
-
-        console.log("You win this round")
+        
+        results.textContent = "You win this round!"
         ++humanScore
         }
     
-    else {console.log("You lose!") 
+    else {results.textContent = "You lose this round!"
         ++computerScore
     }   
-       
-    if (humanScore > computerScore) {
+    
+
+    if (humanScore === 5) {
     alert("You have won!")
     }
-else if (computerScore > humanScore){
+else if (computerScore === 5){
     alert("You have lost!")
 }
-else {alert("It's a tie")
-}
-}
 
-/* Moved playRound function into playGame function to play 5 rounds */
-
+scoreboard.textContent = `Human: ${humanScore} | Computer: ${computerScore}`
 
 }
-
-
-playGame()
