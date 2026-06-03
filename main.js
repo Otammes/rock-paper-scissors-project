@@ -49,6 +49,11 @@ function playRound(humanChoice, computerChoice) {
         ++computerScore
     }   
     
+    if (humanScore === 5 || computerScore === 5) {
+    rockButton.disabled = true;
+    paperButton.disabled = true;
+    scissorsButton.disabled = true;}
+
 
     if (humanScore === 5) {
     alert("You have won!")
